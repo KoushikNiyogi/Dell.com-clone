@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    body{
+     font-weight: bolder;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .onimage{
+        background-color: rgb(0, 0, 0);
+        padding: 10px;
+        color: white;
+        font-size: 20px;
+        width: auto;
+        position: relative;
+        top: 80%;
+    
+    }
+.mid-part{  
+    padding: 10px;
+    padding-top: 40px;
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 0px;
+    border:dotted  rgb(172, 162, 162);
+    transition: border 5s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   
+}
+.mid-part:hover{
+    border: 1px solid saddlebrown;
+}
+.mid-part div{
+     position: relative; 
+     margin: auto;
+    
+}
+.mid-part a{
+     text-decoration: none;
+}
+.mid-part img{
+   width: 359px;
+   height: 219px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.mid-text{
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 1250px) {
+    .mid-part img{
+        width:100%;
+        height: 100%;
+}
+.mid-part{  
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    gap: 6px;
+}
+.mid-part div{
+     position: relative; 
+     margin: auto;
+}
+.onimage{
+        background-color: rgb(0, 0, 0);
+        padding: 10px;
+        color: white;
+        font-size: 20px;
+        width: auto;
+        position: absolute;   
+    }
+   
+
+}
+.mid-part-1{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  
+}
+.mid-part-1 a{
+text-decoration: none;
+text-align: center;
+}
+.mid-part-1 img{
+    width: 80%;
+text-align: center;
+}
+.mid-part-1{
+    padding: 10px;
+    margin-left: 40px;
+    text-align: center;
+    display: flex;
+}
+.mid-part-1 div:nth-child(2){
+   margin: auto;
+  
+}
+@media (max-width: 1250px) {
+    .mid-part-1{
+   display: grid;
+   grid-template-columns: repeat(1,auto);
+
+}  
+}
+.mid-part-2{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(2,auto);
+    grid-template-areas: "b a";
+    margin-left: 40px;
+    border: 1px solid rgb(176, 186, 176);
+
+}
+.mid-part-2 div:nth-child(1){
+   grid-area: a;
+}
+.mid-part-2 div:nth-child(2){
+    grid-area: b;
+  margin: auto;
+}
+.mid-part-2 img{
+    width: 80%;
+}
+@media (max-width: 1250px) {
+    .mid-part-2{
+   grid-template-areas: 'a'
+   'b';
+
+} }
+span{
+    padding: 80px;
+}
+.dell-support{
+    padding: 10px;
+    margin-left: 40px;
+    text-align: center;
+
+}
+.dell-support div:nth-child(1){
+margin: auto;
+font-size: 40px;
+}
+.dell-support div:nth-child(2) div{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 0px;
+    font-size: 30px;
+    color: rgb(67, 67, 159);
+    margin: auto; 
+    border: 1px solid black; 
+}
+.dell-support div:nth-child(2){
+    padding: 100px;
+ 
+}
+.dell-support{
+    font-size: 20px; 
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    margin: auto;
+}
+.dell-support div h3{
+font-size: 30px;
+}
+.dell-support img{
+width: 60px;
+height: 60px;
+}
+@media (max-width: 1250px) {
+    .dell-support{
+    font-size: 20px; 
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    margin: auto;
+} 
+}
+  </style>
+</head>
+<body>
+<h3 class="mid-text">Explore Dell Technologies</h3>
+<!-- Middile Part -->
+<div class="mid-part">
+  <div >   
+    <a href="https://events.dell.com/event/3668829d-04f7-4511-82c3-019a74253310/summary?_gl=1*1iswbrc*_ga*MTQ0OTE4NzE0Ni4xNjczODgwNDcw*_ga_1234567890*MTY3Mzk2MDcyMy42LjEuMTY3Mzk2MjU3Ny4wLjAuMA..*_gcl_aw*R0NMLjE2NzM5NjA3MjcuQ2owS0NRaUFxNW1lQmhDeUFSSXNBSnJ0ZHI1WUtMYkFBcjYwU3IxNm5JOXAybWhqMmpWdjFsV3k5eEEtbV9wSTVwWmg3azYxOG9NcHpKRWFBakVjRUFMd193Y0I.*_gcl_dc*R0NMLjE2NzM5NjA3MjcuQ2owS0NRaUFxNW1lQmhDeUFSSXNBSnJ0ZHI1WUtMYkFBcjYwU3IxNm5JOXAybWhqMmpWdjFsV3k5eEEtbV9wSTVwWmg3azYxOG9NcHpKRWFBakVjRUFMd193Y0I.*_ga_5932KMEGPX*MTY3Mzk2MDcyNC42LjEuMTY3Mzk2MjU3Ny41NC4wLjA.&_ga=2.95924252.1454411400.1673880472-1449187146.1673880470&_gac=1.95452270.1673960729.Cj0KCQiAq5meBhCyARIsAJrtdr5YKLbAAr60Sr16nI9p2mhj2jVv1lWy9xA-m_pI5pZh7k618oMpzJEaAjEcEALw_wcB"> 
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0105-poweredge-0105-poweredge-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
+        <p class="onimage">PowerEdge Next Sign Up to Learn More <span class="arrow">→</span></p>
+    </a>  
+ </div>
+    <div>
+        <a href="https://events.dell.com/event/3668829d-04f7-4511-82c3-019a74253310/summary?_gl=1*1iswbrc*_ga*MTQ0OTE4NzE0Ni4xNjczODgwNDcw*_ga_1234567890*MTY3Mzk2MDcyMy42LjEuMTY3Mzk2MjU3Ny4wLjAuMA..*_gcl_aw*R0NMLjE2NzM5NjA3MjcuQ2owS0NRaUFxNW1lQmhDeUFSSXNBSnJ0ZHI1WUtMYkFBcjYwU3IxNm5JOXAybWhqMmpWdjFsV3k5eEEtbV9wSTVwWmg3azYxOG9NcHpKRWFBakVjRUFMd193Y0I.*_gcl_dc*R0NMLjE2NzM5NjA3MjcuQ2owS0NRaUFxNW1lQmhDeUFSSXNBSnJ0ZHI1WUtMYkFBcjYwU3IxNm5JOXAybWhqMmpWdjFsV3k5eEEtbV9wSTVwWmg3azYxOG9NcHpKRWFBakVjRUFMd193Y0I.*_ga_5932KMEGPX*MTY3Mzk2MDcyNC42LjEuMTY3Mzk2MjU3Ny41NC4wLjA.&_ga=2.95924252.1454411400.1673880472-1449187146.1673880470&_gac=1.95452270.1673960729.Cj0KCQiAq5meBhCyARIsAJrtdr5YKLbAAr60Sr16nI9p2mhj2jVv1lWy9xA-m_pI5pZh7k618oMpzJEaAjEcEALw_wcB"> 
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0105-powerstore-continuously-modern-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
+            <p class="onimage">PowerEdge Next Sign Up to Learn More <span class="arrow">→</span></p>
+        </a> 
+    </div>
+    <div>
+        <a href="https://events.dell.com/event/3668829d-04f7-4511-82c3-019a74253310/summary?_gl=1*1iswbrc*_ga*MTQ0OTE4NzE0Ni4xNjczODgwNDcw*_ga_1234567890*MTY3Mzk2MDcyMy42LjEuMTY3Mzk2MjU3Ny4wLjAuMA..*_gcl_aw*R0NMLjE2NzM5NjA3MjcuQ2owS0NRaUFxNW1lQmhDeUFSSXNBSnJ0ZHI1WUtMYkFBcjYwU3IxNm5JOXAybWhqMmpWdjFsV3k5eEEtbV9wSTVwWmg3azYxOG9NcHpKRWFBakVjRUFMd193Y0I.*_gcl_dc*R0NMLjE2NzM5NjA3MjcuQ2owS0NRaUFxNW1lQmhDeUFSSXNBSnJ0ZHI1WUtMYkFBcjYwU3IxNm5JOXAybWhqMmpWdjFsV3k5eEEtbV9wSTVwWmg3azYxOG9NcHpKRWFBakVjRUFMd193Y0I.*_ga_5932KMEGPX*MTY3Mzk2MDcyNC42LjEuMTY3Mzk2MjU3Ny41NC4wLjA.&_ga=2.95924252.1454411400.1673880472-1449187146.1673880470&_gac=1.95452270.1673960729.Cj0KCQiAq5meBhCyARIsAJrtdr5YKLbAAr60Sr16nI9p2mhj2jVv1lWy9xA-m_pI5pZh7k618oMpzJEaAjEcEALw_wcB"> 
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/heroes/0811-apex-fod-banner-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain" alt="">
+            <p class="onimage">PowerEdge Next Sign Up to Learn More <span class="arrow">→</span></p>
+        </a> 
+    </div>
+</div>
+<span></span>
+<div class="mid-part-1">
+    <div>
+
+    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/republic-day-cons-dell-inspiron-5420nt-uhp-2304-12-homepage-module-rf-1023x842-lr.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+
+   </div>
+   <div>
+    <h4>INSPIRON LEPTOPS</h4>
+    <h2>Power Your Success Story</h2>
+    <p>Give your a tech edge with 10% cashback on Citi cards or instant discounts on UPI & headsets.</p>
+    <p>*T&C apply</p>
+    <a href="">Shop Now</a><span>||</span> <a href="Learn More">Shop All</a>
+   </div>
+</div>
+<span></span>
+<div class="mid-part-2">
+    <div>
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/show-latitude-sb-dell-latitude-5330t-uhp-2304-09-in-homepage-module-lf-1023x842-lr.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+    </div>
+    <div>
+        <h4>LATITUDE LEPTOPS</h4>
+        <h2>Ultra-Premium.Ultra-Inrelligent.</h2>
+        <p>Leptops and 2-in-1s woth Built-in-All for Unprecedented Connectivity,Collaboration && Productivity.</p>
+        <p>*T&C apply</p>
+        <a href="">Shop Deals</a>
+        <a href="Learn More">Shop All</a>
+    </div>
+</div>
+<span></span>
+<div style="    padding: 10px;
+margin-left: 40px;
+text-align: center;" class="dell-support">
+    <div>
+<h1>Dell Support</h1>
+<h5>Get your question answer</h5>
+</div>
+<div>
+<div>
+    <a href=""><img src="https://user-images.githubusercontent.com/22866157/40578885-e3bf4e8e-6139-11e8-8be4-92fc3149f6f0.jpg" alt=""></a>
+    <h3>Contact Support</h3>
+</div>
+<p>Let us assist you with any product or service questions</p>
+<hr>
+<div>
+    <a href=""><img src="https://cdn-icons-png.flaticon.com/512/2527/2527869.png" alt=""></a>
+    <h3>Warranty</h3>
+
+</div>
+<p>Check warranty of the product</p>
+<hr>
+<div>
+    <a href=""><img src="https://cdn-icons-png.flaticon.com/512/3306/3306378.png" alt=""></a>
+    <h3>Product Support</h3>
+
+</div>
+<p>Expertise. Convenience. Quality Support.</p>
+<hr>
+<div>
+    <a href=""><img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" alt=""></a>
+    <h3>Drivers and Download</h3>
+</div>
+<p>Get the latest divers and software</p>
+</div>
+</div>
+
+<span></span>
+<div class="mid-part-1">
+    <div>
+
+    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/heroes/big-shopping-days-cons-dell-g-series-5525nt-uhp-2304-08-in-homepage-hero-1023x842.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+
+   </div>
+   <div>
+    <h1>INSPIRON LEPTOPS</h1>
+    <h2>Power Your Success Story</h2>
+    <p>Give your a tech edge with 10% cashback on Citi cards or instant discounts on UPI & headsets.</p>
+    <p>*T&C apply</p>
+    <a href="">Shop Now</a><span>||</span><a href="Learn More">Shop All</a>
+   </div>
+</div>
+<span></span>
+<div class="mid-part-2">
+    <div>
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/1117-handsonlab-leftfacing-1023x842.png?fmt=jpg&wid=420&hei=346" alt="">
+    </div>
+    <div>
+        <h1>HANDS-ON LABS</h1>
+        <h2>Test-Drive IT Solutions</h2>
+        <p>Dive deeper into cutting-edge infrastructure technology with real-time interactive</p>
+        <p>*T&C apply</p>
+        <a href="">Shop Deals</a><span>||</span> <a href="Learn More">Learn More</a>
+    </div>
+</div>
+<span></span>
+<div style="display: grid; grid-template-columns: repeat(1,auto);" class="mid-part-1">
+    <div>
+
+    <img style="width: 80px;" src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/modules/recyclinglogo-transparent-250x250.png?fmt=png-alpha&amp;wid=250&amp;hei=250" alt="">
+
+   </div>
+   <div>
+    <h1>Dell</h1>
+    <h2>Give Your Device A Second Life</h2>
+    <p>Recycling your old tech helps us create responsible solutions.</p>
+    <p>*T&C apply</p>
+    <a href="Learn More">Get Stared</a>
+   </div>
+</div>
+<span></span>
+<div class="mid-part-1">
+    <div>
+
+    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/1215-latitude-1288x785.png?fmt=png-alpha&wid=1023&hei=842" alt="">
+
+   </div>
+   <div>
+    <h3>LATITUDE FAMILY</h3>
+    <h1>Make the World your Workplace</h1>
+    <p>Give your a tech edge with 10% cashback on Citi cards or instant discounts on UPI & headsets.</p>
+    
+    <a href="">Shop Latitude</a><span>||</span> <a href="Learn More">Shop All</a>
+   </div>
+</div>
+<span></span>
+<div  class="mid-part-1">
+    <div>
+
+    <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/1215-customer-story-rijksmuseum-1023x842.png?fmt=jpg&wid=420&hei=346" alt="">
+
+   </div>
+   <div>
+    <h1>Dell</h1>
+    <h2>CUSTOMER SUCCESS STORIES</h2>
+    <h4>Rijksmuseum</h4>
+    <p>Digitizing masterpieces for future generations</p>
+    <p>*T&C apply</p>
+    <a href="Learn More">Learn More</a>
+   </div>
+</div>
+</body>
+</html>
