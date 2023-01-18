@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/02fd71c999.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/laptop.css">
+    <title>Laptop page</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <div class="icon">
+                <img src="7267ae0cd7e844f99a92ac017b654af6.png" alt="">
+            </div>
+            
+                <ol id="displayAccount">
+                    <li><a href="signin.html"><i class="fa-solid fa-address-card"></i>Sign up</a></li>
+                    <li><i class="fa-solid fa-right-to-bracket"></i>Log In</a></li>
+                    <li> <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart </a> </li>
+                </ol>
+        
+        </div>
+        
+        
+        <div class="search_box">
+            <input type="search" placeholder="Search Pc's" id="input_search">
+            <i class="fa-solid fa-magnifying-glass" id="search_btn"></i>
+        </div>
+      
+      <ol id="displayouterbox">
+        <li><a href="signin.html"><i class="fa-solid fa-address-card"></i></i>Sign Up</a></li>
+        <li> <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>Log In</a></li>
+        <li><i class="fa-solid fa-language"></i>IN/EN</li>
+        <li> <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart </a> </li>
+      </ol>
+    </nav>
+    <div id="midsection">
+      <div id="midsection_part1">
+        <h3>Filters</h3>
+        <div id="productline">
+         <h4>Productline</h4>
+         <label for="Inspiron"><input type="checkbox" class="productline" value="Inspiron" id="Inspiron">Inspiron</label>
+         <label for="Vostro"><input type="checkbox" class="productline" value="Vostro" id="Vostro">Vostro</label>
+         <label for="Alienware"><input type="checkbox" class="productline" value="Alienware" id="Alienware">Alienware</label>
+        </div>
+        <div id="memory">
+            <h4>Memory</h4>
+            <label for="8GB"><input type="checkbox" class="memory" value="8GB" id="8GB">8GB</label>
+            <label for="16GB"><input type="checkbox" class="memory" value="16GB" id="16GB">16GB</label>
+            <label for="32GB"><input type="checkbox" class="memory" value="32GB" id="32GB">32GB</label>
+        </div>
+        <div id="hard_drive">
+            <h4>Storage size</h4>
+            <label for="256GB"><input type="checkbox" class="harddrive" value="256GB" id="256GB">256GB</label>
+            <label for="512GB"><input type="checkbox" class="harddrive" value="512GB" id="512GB">512GB</label>
+            <label for="1TB"><input type="checkbox" class="harddrive" value="1TB" id="1TB">1TB</label>
+        </div>
+        <div id="price">
+            <h4>Price</h4>
+            <label for="10,000-50,000"><input type="checkbox" class="price" value="10,000-50,000" id="10,000-50,000">10,000-50,000</label>
+            <label for="50,000-1,00,000"><input type="checkbox" class="price" value="50,000-1,00,000" id="50,000-1,00,000">50,000-1,00,000</label>
+            <label for="1,00,000-1,50,000"><input type="checkbox" class="price" value="1,00,000-1,50,000" id="1,00,000-1,50,000">1,00,000-1,50,000</label>
+            <label for=">1,50,000"><input type="checkbox" class="price" value="Greater than 1,50,000" id=">1,50,000">Greater than 1,50,000</label>
+        </div>
+        <div id="color">
+            <h4>Color</h4>
+            <label for="Black"><input type="checkbox" class="color" value="Black" id="Black">Black</label>
+            <label for="Silver"><input type="checkbox" class="color" value="Silver" id="Silver">Silver</label>
+            <label for="Grey"><input type="checkbox" class="color" value="Grey" id="Grey">Grey</label>
+            <label for="Green"><input type="checkbox" class="color" value="Green" id="Green">Green</label>
+        </div>
+      </div>
+      <div id="midsection_part2">
+         <label for="">Sort by <select name="" id="sort">
+            <option value="">Select value</option>
+            <option value="Highest_Price">Highest Price</option>
+            <option value="Lowest_Price">Lowest Price</option>
+         </select>
+        </label>
+        <div id="laptop_container">
+             <!--append all laptops here  -->
+        </div>
+      </div>
+    </div>
+    <div id="footerpart">
+
+    </div>
+</body>
+</html>
+<script src="./scripts/laptop.js">
+
+</script>
+
