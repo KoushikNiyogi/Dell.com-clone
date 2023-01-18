@@ -1,0 +1,7 @@
+POST https://long-puce-mussel-belt.cyclic.app/users
+Content-Type: application/json
+
+    {
+      "username": "john.smith",
+      "password": "john.smith"
+    }
