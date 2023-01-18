@@ -6,7 +6,11 @@ let storeData = [];
 
 sort.addEventListener("change",sortbyprice);
 search.addEventListener("click",searchbytitle);
-
+console.log(document.querySelector(".icon>img"));
+document.querySelector(".icon>img").addEventListener("click",function(){
+    console.log("yes");
+    window.location.assign("index.html");
+})
 fetch(URL)
 .then(res=>res.json())
 .then((data)=>{

@@ -1,41 +1,40 @@
 let form=document.getElementById("form")
- let submitButton=document.getElementById("submit")
+let submitButton=document.getElementById("submit")
 let reset=document.getElementById("reset")
 
  let data=JSON.parse(localStorage.getItem("key"))||[] 
- console.log(typeof data.length)
 
- reset.addEventListener("click",()=>{
+ reset.addEventListener("submit",()=>{
 
  })
- submitButton.addEventListener("click",(e)=>{
+ form.addEventListener("submit",(e)=>{
     e.preventDefault()
     // create data 
+    let name = form.Fname.value+" "+form.Lname.value;
+    let email = form.email.value;
+    let password = form.password.value;
     let obj={
-        name:form.Fname.value+" "+form.Lname.value,
-        email:form.email.value,
-        password:form.password.value,
+       name,
+       email,
+       password
     }
-    console.log(form.Fname.required)
-    if(data.length==0){
-        data.push(obj)
-        localStorage.setItem("key",JSON.stringify(data))
-        window.location.assign("index.html")
-    }else{
-        let present=false
+    if(obj.name!=undefined&&obj.email!=undefined&&obj.password!=undefined){
+        let present=false;
         data.forEach((element) => {
-            if(obj.email===element.email){
-                console.log(element.email)
-                present=true
+            if(element.email === email){
+                present=true;
             }   
         });
-        if(present){
-                alert("Email is Already Used")
+        console.log(present);
+        if(present==true){
+                alert("User already exists")
             }else{
                 data.push(obj)
                 localStorage.setItem("key",JSON.stringify(data))
-                window.location.assign("index.html")
+                window.location.assign("login.html")
             }
     }
+        
+    });
     
- })
+ console.log("yes");
