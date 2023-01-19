@@ -1,7 +1,2 @@
-POST https://long-puce-mussel-belt.cyclic.app/users
-Content-Type: application/json
+  https://639eb5f95eb8889197eb9a64.mockapi.io/DELL
 
-    {
-      "username": "john.smith",
-      "password": "john.smith"
-    }
