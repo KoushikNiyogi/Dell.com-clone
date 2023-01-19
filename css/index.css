@@ -377,8 +377,12 @@ ul{
    display: grid;
    grid-template-columns: repeat(4,1fr);
    background-color: #F0F0F0;
+   padding:20px 30px;
    /* width: 100%;
    margin: auto; */
+ }
+ #footer li{
+   margin-top:10px;
  }
  .flex{
    display: flex;
@@ -397,6 +401,7 @@ ul{
  @media only screen and (max-width: 750px) and (min-width: 500px)  {
    #footer{
      grid-template-columns: repeat(2,1fr);
+     padding:20px 30px;
    }
  }
 
@@ -405,6 +410,7 @@ ul{
  @media only screen and (max-width: 499px) and (min-width: 0px)  {
    #footer{
      grid-template-columns: repeat(1,1fr);
+     padding:20px 30px;
    }
  }
 

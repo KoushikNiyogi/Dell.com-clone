@@ -150,8 +150,8 @@ nav>:nth-child(1)>.icon{
     right: 30px;
    }
 
-   
-/* ---------------------------------styles for navigation bar ends here --------------------- */
+
+/* --------------------------------styles for midsection---------------------------- */
 #midsection{
     display:flex;
 }

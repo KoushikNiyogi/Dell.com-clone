@@ -2,6 +2,8 @@ const URL = "https://639eb5f95eb8889197eb9a64.mockapi.io/DELL";
 let container = document.getElementById("laptop_container");
 let sort = document.getElementById("sort");
 let search = document.getElementById("search_btn");
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 let storeData = [];
 
 sort.addEventListener("change",sortbyprice);
@@ -54,6 +56,9 @@ function renderCards(data){
     productline.textContent = "Productline : "+element.productline;
     let button = document.createElement("button");
     button.textContent = "Add to Cart";
+    button.addEventListener("click", () => {
+        addtocart(element, index);
+    });
    
     
     card.append(img,title,price1,price2,price3,processor,memory,harddrive,size,color,productline,button);
@@ -236,4 +241,27 @@ let productline = document.querySelectorAll(".productline");
      }else{
         renderCards(storeData);
      }
+    }
+
+    // -------------------functionality for cart page ----------------
+    function addtocart(element, index) {
+        let flag = false;
+        cart.forEach(ele => {
+            if (ele[0].id === element.id) {
+                flag = true;
+            }
+        });
+         console.log(flag);
+        if(flag == false) {
+            let arr = [];
+            arr.push(element);
+            arr.push(1);
+            cart.push(arr);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Product added to cart");
+            
+        }else {
+            alert("Product is already present in cart");
+        }
+    
     }
