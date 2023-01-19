@@ -98,16 +98,18 @@ table{
   padding: 0;
 }
 th{
-  border-bottom: 1px solid #1e1b1b;
+  border-bottom: 1px solid #ffffff;
   padding: 10px 0;
 }
 tr>td:nth-child(1){
   text-align: left;
-  color: #2d2d2a;
+  color: #000000;
+  border-bottom: 1px solid #ffffff;
 }
 tr>td:nth-child(2){
   text-align: right;
-  color: #000000;
+  color: #483636;
+  border-bottom: 1px solid #ffffff;
 }
 td{
   border-bottom: 1px solid #121010;
@@ -129,7 +131,7 @@ button{
   margin-top: 10px;
   padding: 10px;
   border: none;
-  border-radius: 30px;
+  border-radius: 5px;
   background: #021612;
   color: #fff;
   font-size: 15px;
@@ -139,3 +141,31 @@ button:hover{
   cursor: pointer;
   background: #00bb99;
 }
+#icon{
+  display: flex;
+  justify-content: space-between;
+}
+.dot {
+ margin-right: 0px;
+  background: rgb(0, 0, 0);
+  transition: margin-right 4s,;
+}
+.dot:hover {
+  margin-right: 200px;
+}
+body:hover{
+margin: auto;
+}
+.hrtag{
+  width: 200px;
+  border: 2px solid black;
+  position: absolute;
+  transition: width 10s;
+}
+
+.hrtag{transition-timing-function: linear;}
+.hrtag:hover {
+  width: 700px;
+}
+
+
