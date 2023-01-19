@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 50vh;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    padding: 90px;
+    margin: auto;
+    position: relative;
+    left: 100px;
+    
+}
+
+/* button styling */
+button{
+
+    width: 30px;
+}
