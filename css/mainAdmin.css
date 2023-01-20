@@ -1,0 +1,38 @@
+.product-card-main img{
+    width: 80px;
+    text-align: center;
+}
+.show-all-order{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   gap: 5px;
+  
+}
+.show-all-order div{
+    border: 1px solid rgb(165, 141, 141);
+    
+
+}
+.product-card-main{
+    border-radius: 9px;
+    font-size: 15px;
+text-align: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+@media screen and (max-width: 900px) {
+    .show-all-order{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       gap: 5px;
+      
+    }   
+}
+@media screen and (max-width: 500px) {
+    .show-all-order{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+       gap: 5px;
+      
+    }   
+}
