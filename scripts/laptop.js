@@ -3,14 +3,12 @@ let container = document.getElementById("laptop_container");
 let sort = document.getElementById("sort");
 let search = document.getElementById("search_btn");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
+let logo = document.querySelector(".icon>img");
 let storeData = [];
 
 sort.addEventListener("change",sortbyprice);
 search.addEventListener("click",searchbytitle);
-console.log(document.querySelector(".icon>img"));
-document.querySelector(".icon>img").addEventListener("click",function(){
-    console.log("yes");
+logo.addEventListener("click",function(){
     window.location.assign("index.html");
 })
 fetch(URL)
@@ -60,7 +58,9 @@ function renderCards(data){
         addtocart(element, index);
     });
    
-    
+    card.addEventListener("click",function(){
+        productpage(element);
+    })
     card.append(img,title,price1,price2,price3,processor,memory,harddrive,size,color,productline,button);
     container.append(card);
   });
@@ -263,5 +263,30 @@ let productline = document.querySelectorAll(".productline");
         }else {
             alert("Product is already present in cart");
         }
-    
     }
+
+    // -----------------------------functionality for product page------------------
+
+function productpage(element){
+    let arr = [];
+    arr.push(element);
+    arr.push(element.category);
+    localStorage.setItem("product",JSON.stringify(arr));
+    window.location.assign("product.html")
+}
+
+
+//  -------------------functionality for filter function ----------------
+
+let filterDiaplay = document.getElementById("media_filter");
+let isClicked = true;
+filterDiaplay.addEventListener("click",function(){
+
+    if(isClicked){
+        document.getElementById("midsection_part1").style.display = "block";
+        isClicked = false;
+    }else{
+        document.getElementById("midsection_part1").style.display = "none";
+        isClicked = true;
+    }
+});
