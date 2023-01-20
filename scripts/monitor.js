@@ -237,6 +237,21 @@ function productpage(element){
     let arr = [];
     arr.push(element);
     arr.push(element.category);
-    localStorage.setItem("produuct",JSON.stringify(arr));
+    localStorage.setItem("product",JSON.stringify(arr));
     window.location.assign("product.html")
 }
+
+//  -------------------functionality for filter function ----------------
+
+let filterDiaplay = document.getElementById("media_filter");
+let isClicked = true;
+filterDiaplay.addEventListener("click",function(){
+
+    if(isClicked){
+        document.getElementById("midsection_part1").style.display = "block";
+        isClicked = false;
+    }else{
+        document.getElementById("midsection_part1").style.display = "none";
+        isClicked = true;
+    }
+});

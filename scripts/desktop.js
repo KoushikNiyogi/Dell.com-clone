@@ -68,7 +68,9 @@ function renderCards(data){
         alert("Product added to cart");
 
     })
-   
+    card.addEventListener("click",function(){
+        productpage(element);
+    })
     
     card.append(img,title,price1,price2,price3,processor,memory,harddrive,size,color,productline,button);
     container.append(card);
@@ -251,3 +253,29 @@ let productline = document.querySelectorAll(".productline");
         renderCards(storeData);
      }
     }
+
+    // -----------------------------functionality for product page------------------
+
+    function productpage(element){
+        let arr = [];
+        arr.push(element);
+        arr.push(element.category);
+        localStorage.setItem("product",JSON.stringify(arr));
+        window.location.assign("product.html")
+    }
+    
+    
+
+//  -------------------functionality for filter function ----------------
+ let filterDiaplay = document.getElementById("media_filter");
+let isClicked = true;
+filterDiaplay.addEventListener("click",function(){
+
+    if(isClicked){
+        document.getElementById("midsection_part1").style.display = "block";
+        isClicked = false;
+    }else{
+        document.getElementById("midsection_part1").style.display = "none";
+        isClicked = true;
+    }
+});
