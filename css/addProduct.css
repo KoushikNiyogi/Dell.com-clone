@@ -10,7 +10,7 @@
   
 }
 .show-all-order div{
-    border: 1px solid rgb(125, 122, 122);
+    border: 1px solid rgb(150, 150, 150);
 }
 .product-card-main{
     border-radius: 9px;
@@ -40,7 +40,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: grid;
     grid-template-columns: repeat(1,1fr);
     font-size: 20px;
-    width: 600px;
+    width: 700px;
     color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-left:30px ;
@@ -53,36 +53,26 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  form input{
     width: 500px;
     height: 30px;
-    border: 1px solid black
+    border: 1px solid black;
+    margin-left: 80px;
+    border-radius: 5px;
 }
-
-.updata-data-1{
-    opacity: 1; 
-    z-index: 1;
+.edit-section{
+    margin: auto;
 }
-.edit-product-page{
-    display: grid;
- 
-    grid-template-columns: repeat(2,auto);
-    gap: 20px;
-    height: 100%;
-    width: 100%;
-    position: sticky; 
-}
-button{
+#submit{
     border: 0px;
-    padding: 5px;
+    padding: 7px;
     color: rgb(252, 245, 245);
     background-color: black;
     border-radius: 5px;
     font-size: 20px;
-    margin-left: 75%;
-     cursor: pointer;
-     width: 200px;
-
+    margin: 5px;
+    cursor: pointer;
+    margin-left: 80px;
+    
 }
 
-.edit-section{
-    margin: auto;
-}
+
+
 

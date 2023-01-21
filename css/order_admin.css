@@ -12,22 +12,20 @@
 }
 .show-all-order{
     display: grid;
-    grid-template-columns: repeat(4,300px);
+    grid-template-columns: repeat(3,300px);
    gap: 20px;
    
   
 }
 .show-all-order div{
-
+   
     flex-direction: column;
     padding: 10px;
     border-radius: 5px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  
 
 }
 .product-card-main{
-    
     font-size: 15px;
 text-align: center;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -49,38 +47,17 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       
     }   
 }
-.update-data form{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    font-size: 20px;
-    border: 2px solid black;
-    width: 300px;
-    color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- 
+input{
+    margin-left: 20px;
 }
-.update-data form input{
-    width: 230px;
-    height: 30px;
-  
-    border: 1px solid black
-}
-
-.updata-data-1{
-    opacity: 1; 
-    z-index: 1;
-}
-.edit-product-page{
-    display: grid;
-
-    grid-template-columns: repeat(2,auto);
-    gap: 20px;
-    height: 100%;
+table{
     width: 100%;
-    position: sticky;
-
-   
+    height: 200px;
+    background-color: rgb(255, 255, 255);
 }
+
+
+
 button{
     border: 0px;
     padding: 5px;
@@ -94,20 +71,11 @@ button{
 button:hover{
     background-color: rgb(120, 1, 1);
 }
-.filter{
-    border: 2px solid black;
-    height: 30px;
-    width: 100px;
-    border-radius: 5px;
+body{
+    background-color: rgb(255, 255, 255);
 }
-option{
-    font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
+tr{
+    width: 200px;
 }
-label{
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-body div{
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; 
-}
+
+

@@ -1,3 +1,8 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
 .product-card-main img{
     width: 80px;
     text-align: center;
@@ -35,4 +40,12 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
        gap: 5px;
       
     }   
+}
+.xyz{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.xyz a{
+    color:white;background-color: rgb(0, 0, 0); font-size: 25px; border-radius: 8px; padding: 5px;
 }
