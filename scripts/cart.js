@@ -64,12 +64,12 @@ function renderCards(data){
         }
         else{ 
             element[1]--;
-            itemprice.textContent=element[1]*element[0].price;
-            localStorage.setItem("cart",JSON.stringify(cartArr));
-            quantity.textContent++;
+           
         }
 
-       
+        itemprice.textContent=element[1]*element[0].price;
+            localStorage.setItem("cart",JSON.stringify(cartArr));
+            quantity.textContent++;
 
        
     })
