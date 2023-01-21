@@ -97,7 +97,10 @@ function renderProduct(product) {
     button.addEventListener("click",function(){
       addtocart(product);
     });
-
+    let cartTotal = document.getElementById("cart_container");
+    cartTotal.textContent = cart.length;
+    let mediacartTotal = document.getElementById("media_cart_container");
+    mediacartTotal.textContent = cart.length;
     if(product[1]=="Laptop"||product[1]=="Desktop"){
         div2.append(title,price1,price2,price3,processor,memory,harddrive,size,color,productline,button);
     }else{
@@ -124,7 +127,7 @@ function addtocart(element) {
         cart.push(arr);
         localStorage.setItem("cart", JSON.stringify(cart));
         alert("Product added to cart");
-        
+       
     }else {
         alert("Product is already present in cart");
     }

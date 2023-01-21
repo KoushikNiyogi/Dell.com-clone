@@ -33,7 +33,7 @@ form.addEventListener("submit",(e)=>{
             }
            
             if(email==="admin@gmail.com"&&password==="admin"){
-                window.location.assign("adminDashboard.html")
+                window.location.assign("mainAdmin.html")
             }else{
                 window.location.assign("index.html")
             }

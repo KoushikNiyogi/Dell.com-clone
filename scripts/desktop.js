@@ -66,11 +66,13 @@ function renderCards(data){
 
         localStorage.setItem("cart",JSON.stringify(cart));
         alert("Product added to cart");
+       
 
     })
-    card.addEventListener("click",function(){
-        productpage(element);
-    })
+    let cartTotal = document.getElementById("cart_container");
+    cartTotal.textContent = cart.length;
+    let mediacartTotal = document.getElementById("media_cart_container");
+    mediacartTotal.textContent = cart.length;
     
     card.append(img,title,price1,price2,price3,processor,memory,harddrive,size,color,productline,button);
     container.append(card);

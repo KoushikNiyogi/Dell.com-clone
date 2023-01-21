@@ -53,6 +53,10 @@ function renderCards(data) {
         card.addEventListener("click",function(){
             productpage(element);
         })
+        let cartTotal = document.getElementById("cart_container");
+        cartTotal.textContent = cart.length;
+        let mediacartTotal = document.getElementById("media_cart_container");
+        mediacartTotal.textContent = cart.length;
         card.append(img, title, price1, price2, price3, productline, button);
         container.append(card);
     });
@@ -224,6 +228,7 @@ function addtocart(element, index) {
         cart.push(arr);
         localStorage.setItem("cart", JSON.stringify(cart));
         alert("Product added to cart");
+        
         
     }else {
         alert("Product is already present in cart");
