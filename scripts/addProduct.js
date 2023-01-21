@@ -51,8 +51,9 @@ function renderCards(data){
     container.append(card);
   });
 }
-let data_submit=document.querySelector("#data-updata-in-server")
-  data_submit.addEventListener("click",()=>{
+let data_submit=document.querySelector("form")
+  data_submit.addEventListener("submit",(event)=>{
+    event.preventDefault()
    let obj={
     "name":document.querySelector("#p-name").value ,
     "image1":document.querySelector("#image-1").value ,
@@ -101,4 +102,5 @@ fetch(`${URL}/${id}`,{
   }
    
   })
+  
  
