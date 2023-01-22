@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/02fd71c999.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
     <link rel="stylesheet" href="css/cart.css">
     <style>
@@ -49,37 +51,39 @@
 
 
     <!-- to show price of an item -->
-    <h1> 
-        <!-- append the pricing here -->
-    </h1>
+    <h1 id="greet"></h1>
     <!-- container to append cart data -->
     <div id="parent">
+       
     <div id="container">
+        
         <!-- append the cart data here -->
     </div>
-
-    <div id="payment-info">
-        <!-- append the payment details here -->
-
-        <input type="text" name="" id="coupon" placeholder="Enter Coupon">
-        <button style="width: 100px;" id="couponbtn">Apply coupon</button>
-
-
-        <h4>
-            Total savings is <span id="saving"></span>
-        </h4>
-
-        <p>Items      :- <span id="items"></span> </p>
-        <p>Total order value :- <span id="orderValue"></span></p>
-        <p>Above prices include Tax and Shipping</p>
-
-        <p>Arrives by <span id="date"></span> </p>
-
-        <button id="checkout">Checkout</button>
-        <!-- <button id="shopping">Continue Shopping</button>
-        <a href="">Save cart</a>
-        <a href="">email your cart</a> -->
+    <div>
+        <div id="payment-info">
+            <!-- append the payment details here -->
+             <h3>Apply coupon</h3>
+            <input type="text" name="" id="coupon" placeholder="Enter Coupon">
+            <button id="couponbtn">Apply coupon</button>
+            <hr>
+    
+            <h4>
+                Total savings is <span id="saving"></span>
+            </h4>
+    
+            <p>Items      :- <span id="items"></span> </p>
+            <p>Total order value :- <span id="orderValue"></span></p>
+            <p>Above prices include Tax and Shipping</p>
+    
+            <p>Arrives by <span id="date"></span> </p>
+    
+            <button id="checkout">Checkout</button>
+            <!-- <button id="shopping">Continue Shopping</button>
+            <a href="">Save cart</a>
+            <a href="">email your cart</a> -->
+        </div>
     </div>
+    
 
   </div>
 
