@@ -70,3 +70,6 @@ table{
     height: 20px;
     text-align: center;
   }
+  body>h2{
+    text-align: center;
+  }
