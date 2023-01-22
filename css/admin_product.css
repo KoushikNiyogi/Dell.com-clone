@@ -94,3 +94,20 @@ button{
 button:hover{
     background-color: rgb(120, 1, 1);
 }
+.filter{
+    border: 2px solid black;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+}
+option{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+label{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body div{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; 
+}

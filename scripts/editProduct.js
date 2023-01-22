@@ -1,3 +1,4 @@
+let main_data=[]
 const URL = "https://639eb5f95eb8889197eb9a64.mockapi.io/DELL";
 let id=''
 container=document.querySelector(".show-all-order")
@@ -5,6 +6,7 @@ fetch(URL)
 .then(res=>res.json())
 .then((data)=>{
     console.log(data);
+    main_data=data;
   let newData = data.filter(function(element){
     return element;
   })
@@ -143,4 +145,38 @@ fetch(`${URL}/${id}`,{
   }
    
   })
+  function search(){ 
+    let searched=document.querySelector("#input_search").value;
+    console.log(searched)
+    let new_data=main_data.filter((ele)=>{
+      return ele.name.toLowerCase().includes(searched.toLowerCase())
+    })
+    console.log(new_data)
+   renderCards(new_data)
+  }
  
+  
+ function filter_handle(){
+  let arr=[]
+  var filter=document.querySelector(".filter").value;
+ let filter_data=main_data.filter((ele)=>{
+  if(ele.category.toLowerCase()==filter){
+    arr.push(ele)
+  }
+  return arr;
+ })
+ renderCards(arr)
+ }
+function sorted(){
+  var filter=document.querySelector(".filter").value;
+  let sorted_data=main_data.sort((a,b)=>{
+
+    if(filter=="lh"){
+  return a.price-b.price
+    }
+    else if(filter="hl"){
+      return b.price-a.price
+    }
+  })
+  renderCards(sorted_data)
+}
