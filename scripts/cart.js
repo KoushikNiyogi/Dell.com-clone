@@ -97,6 +97,8 @@ function renderCards(data){
 
     let add=document.createElement("button");
     add.textContent="+";
+    add.style.padding = "10px"
+    add.style.marginRight = "5px";
     add.addEventListener("click",()=>{
         increment(element,quantity,index);
     })
@@ -106,6 +108,8 @@ function renderCards(data){
 
     let subtract=document.createElement("button");
     subtract.textContent="-";
+    subtract.style.padding = "10px";
+    subtract.style.marginLeft = "5px";
     subtract.addEventListener("click",()=>{
         decrement(element,quantity,index);
     })
@@ -163,6 +167,7 @@ function deletefromcart(element,index){
 }
 
 couponbtn.addEventListener("click",function(){
+  let totalValue = totalOrder.textContent;
   if(coupon.value==="republic"){
     totalOrder.textContent=totalValue-0.2*totalValue;
   }

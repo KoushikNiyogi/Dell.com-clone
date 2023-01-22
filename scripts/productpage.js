@@ -115,14 +115,14 @@ function renderProduct(product) {
 function addtocart(element) {
     let flag = false;
     cart.forEach(ele => {
-        if (ele[0].id === element.id) {
+        if (ele[0].id === element[0].id) {
             flag = true;
         }
     });
      console.log(flag);
     if(flag == false) {
         let arr = [];
-        arr.push(element);
+        arr.push(element[0]);
         arr.push(1);
         cart.push(arr);
         localStorage.setItem("cart", JSON.stringify(cart));
