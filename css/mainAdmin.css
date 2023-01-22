@@ -49,3 +49,20 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 .xyz a{
     color:white;background-color: rgb(0, 0, 0); font-size: 25px; border-radius: 8px; padding: 5px;
 }
+table{
+    width: 80%;
+    margin: auto;
+  }
+  thead th{
+    background-color: rgb(127, 144, 255);
+    border: 1px solid black; 
+    width: 200px;
+    height: 30px;
+  }
+  td{
+    background-color: aquamarine;
+    border: 1px solid black; 
+    width: 200px;
+    height: 20px;
+    text-align: center;
+  }
