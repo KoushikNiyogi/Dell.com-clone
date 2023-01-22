@@ -28,7 +28,19 @@ if(obj.fname=="" || obj.lname=="" || obj.address=="" || obj.country=="" || obj.z
     alert("Please Fill Complete Details")
 }
 else{
-    location.replace('payment.html')
+    location.replace('payments.html')
 }
 console.log(obj)
 })
+
+
+
+let totalbill = localStorage.getItem("totalbill");
+let totalsaving = localStorage.getItem("totalsaving");
+let totalitem = localStorage.getItem("totalitem");
+
+
+
+document.getElementById("totalbill").textContent = totalbill
+document.getElementById("totalitem").textContent = totalitem
+document.getElementById("totalsaving").textContent =  totalsaving

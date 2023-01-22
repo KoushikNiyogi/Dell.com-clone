@@ -15,3 +15,11 @@ button.addEventListener("submit",(e)=>{
    
     
 })
+
+let totalbill = localStorage.getItem("totalbill");
+let totalitem = localStorage.getItem("totalitem");
+
+
+
+document.getElementById("totalbill").textContent = totalbill
+document.getElementById("totalitem").textContent = totalitem

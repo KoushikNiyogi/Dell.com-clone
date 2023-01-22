@@ -2,6 +2,8 @@ const URL = "https://639eb5f95eb8889197eb9a64.mockapi.io/DELL";
 let container = document.getElementById("desktop_container");
 let sort = document.getElementById("sort");
 let search = document.getElementById("search_btn");
+
+let cart=JSON.parse(localStorage.getItem("cart"))||[];
 let storeData = [];
 
 sort.addEventListener("change",sortbyprice);

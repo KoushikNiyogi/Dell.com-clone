@@ -1,11 +1,62 @@
-let cartArr=JSON.parse(localStorage.getItem("cart"))||[];
-
+let cart=JSON.parse(localStorage.getItem("cart"))||[];
+let t=document.getElementById("saving");
 let container=document.querySelector("#container");
-renderCards(cartArr);
+let items=document.getElementById("items");
+let coupon=document.getElementById("coupon");
+let totalOrder=document.getElementById("orderValue");
+let couponbtn=document.getElementById("couponbtn");
+
+renderCards(cart);
+let user = JSON.parse(localStorage.getItem("user"))||null;
+let greet = document.getElementById("greet");
+if(user!=null){
+  greet.textContent = `Hi ${user.name}`;
+}
 
 function renderCards(data){
     container.innerHTML = null;
+
+    let totalSavings=data.reduce(function(acc,item){
+      let q=item[1];
+      let p=+item[0].price;
+      let discPrice=+item[0].strikeoffprize;
+      let tot=q*(discPrice-p);
+      acc+=tot;
+      return acc;
+    },0)
+    t.textContent=totalSavings;
+
+
+    let totalItems=data.reduce(function(acc,item){
+      let q=item[1];
+      
+      acc+=q;
+      return acc;
+    },0)
+    items.textContent=totalItems;
+
+  
+    let totalValue=data.reduce((acc,item)=>{
+      let q1=item[1];
+      let p1=+item[0].price;
+      let tot1=p1*q1;
+      acc+=tot1;
+      return acc;
+    },0)
+    console.log(totalValue)
+    totalOrder.textContent=totalValue;
+
+    var currentDate = new Date();
+    var threeDaysLater = new Date(currentDate.getTime() + 3*24*60*60*1000).toLocaleDateString();
+    let date=document.getElementById("date");
+    date.textContent= threeDaysLater;
+
+    // let totalCost=JSON.parse(localStorage.getItem("total"))||[];
+    // totalCost.push(totalValue);
+    // eventlistener on clicking the checkout button
     
+
+
 
     data.forEach((element,index) =>{
 
@@ -39,64 +90,83 @@ function renderCards(data){
     productline.textContent = "Productline : "+element[0].productline;
 
 
-    let itemprice=document.createElement("h1");
-    itemprice.textContent=element[0].price;
+    // let itemprice=document.createElement("h1");
+    // itemprice.textContent=element[0].price;
+    let quantity=document.createElement("span");
+    quantity.textContent=element[1];
 
     let add=document.createElement("button");
     add.textContent="+";
     add.addEventListener("click",()=>{
-        element[1]++;
-        itemprice.textContent=element[1]*element[0].price;
-
-        localStorage.setItem("cart",JSON.stringify(cartArr));
-        
+        increment(element,quantity,index);
     })
 
-    let quantity=document.createElement("span");
-    quantity.textContent=element[1];
+    
+    
 
     let subtract=document.createElement("button");
     subtract.textContent="-";
     subtract.addEventListener("click",()=>{
-        if(quantity.textContent<=1){
-            cartArr.splice(index,1);
-            localStorage.setItem("cart",JSON.stringify(cartArr));
-        }
-        else{ 
-            element[1]--;
-           
-        }
-
-        itemprice.textContent=element[1]*element[0].price;
-            localStorage.setItem("cart",JSON.stringify(cartArr));
-            quantity.textContent++;
-
-       
+        decrement(element,quantity,index);
     })
 
+
+
    
-    card.append(img,title,price1,price2,price3,processor,memory,harddrive,size,color,productline,itemprice,add,quantity,subtract);
+    card.append(img,title,price1,price2,price3,processor,memory,harddrive,size,color,productline,add,quantity,subtract);
     container.append(card);
   });
 }
 
 
-let price=document.querySelector("h1");
-cartArr.forEach((el)=>{
-     price.textContent=el[0].price*qty;
+let checkout = document.getElementById("checkout");
+checkout.addEventListener("click",()=>{
+    checkouttoaddress();
 })
 
+    function checkouttoaddress(){
+      if(user!=null){
+      let TotalValue = totalOrder.textContent;
+      let TotalItems = items.textContent;
+      let TotalSaving = t.textContent;
+      localStorage.setItem("totalbill",TotalValue);
+      localStorage.setItem("totalitem",TotalItems)
+      localStorage.setItem("totalsaving",TotalSaving)
+      window.location.assign("address.html");
+      }else{
+        window.location.assign("login.html");
+      }
+    }
 
-let payments=document.querySelector("#payment-info");
-function paymentInfo(data){
-    data.forEach((el,i)=>{
-        let card1=document.createElement("div");
-        let discount=document.createElement("span");
-        discount.textContent="fhahfafaf";
-
-        card1.append(discount);
-        payments.append(card1);
-    })
+function increment(element,span,index){
+      element[1]++;
+      localStorage.setItem("cart",JSON.stringify(cart));
+      renderCards(cart);
 }
 
-paymentInfo(cartArr);
+function decrement(element,span,index){
+  if(element[1]>1){
+    element[1]--;
+    localStorage.setItem("cart",JSON.stringify(cart));
+    renderCards(cart);
+   }else{
+    deletefromcart(element,index)
+   } 
+}
+
+
+function deletefromcart(element,index){
+  cart.splice(index,1);
+  localStorage.setItem("buy",JSON.stringify(cart));
+  renderCards(cart);
+
+}
+
+couponbtn.addEventListener("click",function(){
+  if(coupon.value==="republic"){
+    totalOrder.textContent=totalValue-0.2*totalValue;
+  }
+  
+    // totalOrder.textContent=totalValue-0.2*totalValue;
+})
+   
