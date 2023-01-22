@@ -3,9 +3,70 @@ let cartArr=JSON.parse(localStorage.getItem("cart"))||[];
 let container=document.querySelector("#container");
 renderCards(cartArr);
 
+let Total=document.getElementById("saving").textContent;
+
+
+
+
 function renderCards(data){
     container.innerHTML = null;
+
+    let totalSavings=data.reduce(function(acc,item){
+      let q=item[1];
+      let p=+item[0].price;
+      let discPrice=+item[0].strikeoffprize;
+      let tot=q*(discPrice-p);
+      acc+=tot;
+      return acc;
+    },0)
+
+    let t=document.getElementById("saving");
+    t.textContent=totalSavings;
+
+    let items=document.getElementById("items");
+
+    items.textContent=data.length;
+
+    let totalOrder=document.getElementById("orderValue");
+    let totalValue=data.reduce((acc,item)=>{
+      let q1=item[1];
+      let p1=+item[0].price;
+      let tot1=p1*q1;
+      acc+=tot1;
+      return acc;
+    },0)
+    console.log(totalValue);
+    totalOrder.textContent=totalValue;
+
+
+    var currentDate = new Date();
+    var threeDaysLater = new Date(currentDate.getTime() + 3*24*60*60*1000).toLocaleDateString();
+    let date=document.getElementById("date");
+    date.textContent= threeDaysLater;
+
+
+    let coupon=document.getElementById("coupon");
+    let couponbtn=document.getElementById("couponbtn");
+    couponbtn.addEventListener("click",function(){
+      if(coupon.value==="republic"){
+        totalOrder.textContent=totalValue-0.2*totalValue;
+      }
+      
+        // totalOrder.textContent=totalValue-0.2*totalValue;
+    })
     
+     
+
+    // let totalCost=JSON.parse(localStorage.getItem("total"))||[];
+    // totalCost.push(totalValue);
+    // eventlistener on clicking the checkout button
+    let checkout=document.getElementById("checkout");
+    checkout.addEventListener("click",()=>{
+         localStorage.setItem("total",totalValue);
+         window.location.assign("address.html");
+    })
+   
+
 
     data.forEach((element,index) =>{
 
@@ -39,64 +100,109 @@ function renderCards(data){
     productline.textContent = "Productline : "+element[0].productline;
 
 
-    let itemprice=document.createElement("h1");
-    itemprice.textContent=element[0].price;
+    // let itemprice=document.createElement("h1");
+    // itemprice.textContent=element[0].price;
+
 
     let add=document.createElement("button");
     add.textContent="+";
     add.addEventListener("click",()=>{
         element[1]++;
-        itemprice.textContent=element[1]*element[0].price;
+        quantity.textContent++;
+        // .textContent=element[1]*element[0].price;
+        t.textContent=element[1]*(element[0].strikeoffprize-element[0].price);
+
+        items.textContent=data.length+element[1];
+
+        // total value of items
+        totalOrder.textContent=element[1]*element[0].price;
 
         localStorage.setItem("cart",JSON.stringify(cartArr));
-        
+        // window.location.reload();
     })
 
     let quantity=document.createElement("span");
     quantity.textContent=element[1];
+    
 
     let subtract=document.createElement("button");
     subtract.textContent="-";
     subtract.addEventListener("click",()=>{
-        if(quantity.textContent<=1){
-            cartArr.splice(index,1);
-            localStorage.setItem("cart",JSON.stringify(cartArr));
-        }
-        else{ 
-            element[1]--;
-           
-        }
+        if(quantity.textContent==1){
+          cartArr.splice(index,1);
+          localStorage.setItem("cart",JSON.stringify(cartArr));
+          window.location.reload();
+         }
+        else{
+        element[1]--;
+        quantity.textContent--;
+        items.textContent=element[1];
+        t.textContent=element[1]*(element[0].strikeoffprize-element[0].price);
 
-        itemprice.textContent=element[1]*element[0].price;
-            localStorage.setItem("cart",JSON.stringify(cartArr));
-            quantity.textContent++;
+        // for total cart items value
+        totalOrder.textContent=element[1]*element[0].price;
 
-       
+        // itemprice.textContent=element[1]*element[0].price;
+        localStorage.setItem("cart",JSON.stringify(cartArr));
+        // window.location.reload();
+        }
     })
 
+
+
    
-    card.append(img,title,price1,price2,price3,processor,memory,harddrive,size,color,productline,itemprice,add,quantity,subtract);
+    card.append(img,title,price1,price2,price3,processor,memory,harddrive,size,color,productline,add,quantity,subtract);
     container.append(card);
   });
 }
 
 
-let price=document.querySelector("h1");
-cartArr.forEach((el)=>{
-     price.textContent=el[0].price*qty;
-})
 
 
-let payments=document.querySelector("#payment-info");
-function paymentInfo(data){
-    data.forEach((el,i)=>{
-        let card1=document.createElement("div");
-        let discount=document.createElement("span");
-        discount.textContent="fhahfafaf";
 
-        card1.append(discount);
-        payments.append(card1);
-    })
-}
+// let payments=document.querySelector("#payment-info");
+// function paymentInfo(data){
+//     data.forEach((el,i)=>{
 
-paymentInfo(cartArr);
+//         JSON.parse(localStorage.getItem("cart"));
+//         let card1=document.createElement("div");
+//         let discount=document.createElement("span");
+        
+//         discount.textContent="₹"+el[1]*(el[0].strikeoffprize-el[0].price) +" Total savings";
+
+//         let item=document.createElement("p");
+//         item.textContent="items "+ "₹ " + el[0].price;
+
+//         let orderValue=document.createElement("p");
+//         orderValue.textContent="Total Order Value "+  "₹ " +el[0].price;
+
+//         let p=document.createElement("p");
+//         p.textContent="Above prices include Tax and Shipping";
+
+//         let arrive=document.createElement("p");
+//         arrive.textContent="Arrives by "+ Date();
+
+//         let checkout=document.createElement("button");
+//         checkout.textContent="Checkout";
+//         checkout.style="width:250px;background-color:green";
+
+//         checkout.addEventListener("click",()=>{
+            
+//         })
+
+//         let continued=document.createElement("button");
+//         continued.textContent="Continue Shopping"
+//         continued.style="color:blue;width:250px;margin-top:10px";
+
+//         card1.style="border:1px solid black"
+
+
+
+
+
+//         card1.append(discount,item,orderValue,p,arrive,checkout, continued);
+//         payments.append(card1);
+//     })
+// }
+
+// paymentInfo(cartArr);
